@@ -97,13 +97,35 @@ for(var key in box) {
 
 
 // eFarmony exercise
+// empty animal object stored in a variable
+// object literal notation
 var animal = {};
 
+// giving the animal the name 'Mittens'
+// dot notation
 animal.username = 'Mittens';
 
+// tagline for Mittens is 'Pet me!'
+// bracket notation
 animal['tagline'] = 'Pet me!';
 
+// empty array stored in a variable
 var noises = [];
 animal.noises = noises;
 
+// console logging our animal object returns:
+// username: 'Mittens', tagline 'Pet me!', noises: Array[0]
 console.log(animal);
+
+
+var count = 0;
+
+// loop through the properties in the animal object
+for (var key in animal) {
+  count++;
+  if (key === 'username') {
+    console.log('Hi, my name is ' + animal[key]);
+  } else if (key === 'tagline') {
+    console.log('I like to say ' + animal[key]);
+  }
+}
