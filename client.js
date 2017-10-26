@@ -122,8 +122,12 @@ var count = 0;
 
 // loop through the properties in the animal object
 for (var key in animal) {
+  // incrementing the counter
+  // count = count + 1
   count++;
+  // accessing the property name of the object
   if (key === 'username') {
+    // accessing the value of the key 
     console.log('Hi, my name is ' + animal[key]);
   } else if (key === 'tagline') {
     console.log('I like to say ' + animal[key]);
