@@ -24,6 +24,7 @@ var box = {};
 // use dots to access methods
 // use dots to access properties
 // whatever is to the left of a dot, is an object
+// do NOT use dot noation with a variable
 box.material = 'cardboard';
 
 // box.material returns 'cardboard' --> checks memory and returns what is stored
@@ -67,3 +68,42 @@ var func = function() {
 };
 // logs 'cardboard'
 console.log(box[func()]);
+
+
+// numbers and unusual characters (^&*) are non-valid characters
+// cannot be variables
+
+// STORING DATA
+// store an object
+box['size'] = {
+  'height': 2,
+  'weight': 80
+};
+// when we store functions as a property on an object, we call it a method
+box.area = function() {
+  return box.size.height * box.size.width;
+};
+
+
+
+// ITERATION / LOOPING
+// for in loop
+for(var key in box) {
+  // logs 'material' 'size' 'area'
+  // 'key' holds the value of the property name
+  console.log(key);
+}
+
+
+
+// eFarmony exercise
+var animal = {};
+
+animal.username = 'Mittens';
+
+animal['tagline'] = 'Pet me!';
+
+var noises = [];
+animal.noises = noises;
+
+console.log(animal);
