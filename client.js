@@ -143,12 +143,14 @@ for (var key in animal) {
 // an array is a subclass of an object, it inherits from an object
 var box2 = [];
 
-box[0] = true;
-box[1] = 'meow';
-box.push({'hello' : 'goodbye'});
+box2[0] = true;
+box2[1] = 'meow';
+// adding an object to the box
+box2.push({'hello' : 'goodbye'});
 
 var i = 0;
 
-box[i];
-box[1];
-box.pop();
+box2[i];  // evaluates to true
+box2[1];  // evalues to 'meow'
+box2.pop();  // returns the last item in the array, the object {'hello' : 'goodbye'}, and returns it
+console.log(box2); // evalutes to [true, 'meow']
