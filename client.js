@@ -256,10 +256,17 @@ var add = function(a, b) {  // curly brackets represent the DECLARATION / DEFINI
 add(3, 4, 5); // 3, 4, 5 are the arguments
 
 
-// Definition with jQuery
+// DEFINITION WITH JQUERY
+// function expression
+// variable hoisting
 var nameImprover = function(name, adj) {
   return 'Col ' + name + ' Mc' + adj + ' pants';
 };
+
+// function declaration
+function nameStaySame(name) {
+  return name;
+}
 
 $('body').hide();
 
@@ -268,7 +275,7 @@ myArr.forEach(function(val) {
   console.log(val);
 });
 
-                     // function definition
+// jquery            // function definition
 $('button').on('click', function() {
   console.log('Don\'t press my buttons!');
 });
