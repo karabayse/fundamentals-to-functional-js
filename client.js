@@ -174,3 +174,24 @@ for (var i = 0; i < box2.length; i++) {
   console.log(box2[i]);
   console.log(i);
 }
+
+console.log(box2['length']);  // logs 2
+console.log(box2[length]);  // logs meow
+console.log(box2[box2.length]);  // logs undefined
+
+
+
+// ARRAY EXERCISE
+var noiseArray = ['purr'];
+
+noiseArray.unshift('hiss');
+noiseArray.push('meow');
+
+noiseArray[3] = 'growl';
+
+console.log(noiseArray.length);
+
+console.log(noiseArray);
+
+animal.noises = noiseArray;
+console.log(animal);
