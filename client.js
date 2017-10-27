@@ -233,3 +233,24 @@ animals.push(dog, honeyBadger);
 
 // logs 4
 console.log(animals.length);
+
+
+
+
+// FUNCTIONS
+// small modules of code that isolate a certain operation -> encapsulation
+// code that you want repeated
+// functions are objects
+// pass arguments
+// there are parameters that hold values
+// functions have scope
+// () is the invocation operator
+
+//  add is the FUNCTION NAME
+var add = function(a, b) {  // curly brackets represent the DECLARATION / DEFINITION
+                // a & b are the PARAMETERS
+// return statement represents the FUNCTION BODY
+  return a + b;
+};
+// INVOCATION / CALL-TIME
+add(3, 4, 5); // 3, 4, 5 are the arguments
