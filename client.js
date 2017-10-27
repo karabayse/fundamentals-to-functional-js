@@ -254,3 +254,17 @@ var add = function(a, b) {  // curly brackets represent the DECLARATION / DEFINI
 };
 // INVOCATION / CALL-TIME
 add(3, 4, 5); // 3, 4, 5 are the arguments
+
+
+// Definition with jQuery
+var nameImprover = function(name, adj) {
+  return 'Col ' + name + ' Mc' + adj + ' pants';
+};
+
+$('body').hide();
+
+myArr.forEach(function(val) {console.log(val);});
+
+$('button').on('click', function() {
+  console.log('Don\'t press my buttons!');
+});
