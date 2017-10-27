@@ -152,5 +152,25 @@ var i = 0;
 
 box2[i];  // evaluates to true
 box2[1];  // evalues to 'meow'
-box2.pop();  // returns the last item in the array, the object {'hello' : 'goodbye'}, and returns it
-console.log(box2); // evalutes to [true, 'meow']
+box2.pop();  // returns the last item in the array, the object {'hello' : 'goodbye'}, and returns it -> is destructive
+console.log(box2);  // evalutes to [true, 'meow']
+
+box2['size'] = 9;
+box2[0] = 'meow';
+
+box2['size'];  // evaulates to 9
+box2.size;  // evalutes to 9
+box2['0'];  // evaluates to 'meow'
+box2[0];
+console.log(box2[0]);
+
+for (var k in box2) {
+  console.log(k);  // logs the property names
+  console.log(box2[k]);  // logs the values
+  console.log(box.k);  // logs undefined, because you cannot use dot notation with a variable
+}
+
+for (var i = 0; i < box2.length; i++) {
+  console.log(box2[i]);
+  console.log(i);
+}
