@@ -127,9 +127,28 @@ for (var key in animal) {
   count++;
   // accessing the property name of the object
   if (key === 'username') {
-    // accessing the value of the key 
+    // accessing the value of the key
     console.log('Hi, my name is ' + animal[key]);
   } else if (key === 'tagline') {
     console.log('I like to say ' + animal[key]);
   }
 }
+
+
+
+// ARRAYS
+// an array is a container, just like an object
+// an array is a data structure
+// an array is an object
+// an array is a subclass of an object, it inherits from an object
+var box2 = [];
+
+box[0] = true;
+box[1] = 'meow';
+box.push({'hello' : 'goodbye'});
+
+var i = 0;
+
+box[i];
+box[1];
+box.pop();
