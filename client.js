@@ -184,14 +184,52 @@ console.log(box2[box2.length]);  // logs undefined
 // ARRAY EXERCISE
 var noiseArray = ['purr'];
 
+// puts 'hiss' in the first position -> native JavaScript array method
 noiseArray.unshift('hiss');
+// a method is a function as denoted by the function call of parentheses
 noiseArray.push('meow');
 
 noiseArray[3] = 'growl';
 
+// index starts from 0, so the last index is 1 less than the length
 console.log(noiseArray.length);
 
+// ['hiss', 'purr', 'meow', 'growl']
 console.log(noiseArray);
 
+// overriding empty array
 animal.noises = noiseArray;
+// object -> {username: 'Mittens', tagline: 'Pet me!', noises: Array[4]}
 console.log(animal);
+
+
+
+// 2nd ARRAY EXERCISE
+var animals = [];
+
+animals.push(animal);
+
+var quackers = {username: 'DaffyDuck', tagline: 'Yippeee!', noises: ['quack', 'honk', 'sneeze', 'growl']};
+
+// same as array.push -> adds quackers to the animals array
+animals[animals.length] = quackers;
+
+// [{username: 'Mittens', tagline: 'Pet me!', noises: Array[4]}
+//  {username: 'DaffyDuck', tagline: 'Yippeee!', noises: Array[4]}]
+console.log(animals);
+
+var dog = {
+  username: 'Kabosu',
+  tagline: 'Such profile',
+  noises: ['bark', 'woof', 'wow']
+};
+
+var honeyBadger = {};
+honeyBadger.username = 'Randall';
+honeyBadger.tagline = 'Honey badger dont care';
+honeyBadger.noises = ['screech', 'growl'];
+
+animals.push(dog, honeyBadger);
+
+// logs 4
+console.log(animals.length);
