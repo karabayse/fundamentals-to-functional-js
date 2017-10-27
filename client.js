@@ -263,8 +263,12 @@ var nameImprover = function(name, adj) {
 
 $('body').hide();
 
-myArr.forEach(function(val) {console.log(val);});
+            // function definition without a name
+myArr.forEach(function(val) {
+  console.log(val);
+});
 
+                     // function definition
 $('button').on('click', function() {
   console.log('Don\'t press my buttons!');
 });
