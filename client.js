@@ -268,7 +268,8 @@ function nameStaySame(name) {
   return name;
 }
 
-$('body').hide();
+// $ is a function name
+$('body').hide(); // hide is the name of a function
 
             // function definition without a name
 myArr.forEach(function(val) {
@@ -277,5 +278,19 @@ myArr.forEach(function(val) {
 
 // jquery            // function definition
 $('button').on('click', function() {
-  console.log('Don\'t press my buttons!');
+       // log is a function name
+  console.log('Don\'t press my buttons!'); // function body
 });
+
+
+
+// FUNCTION BODY
+// located between curly brackets
+// body is intepreted when the function is called
+
+
+// ARGUMENTS & PARAMETERS
+// are fundamentally different from one another
+// parameters are passed in right after the function key word
+// parameters are placeholders like variables, they hold values
+// parameters have value when you pass arguments
