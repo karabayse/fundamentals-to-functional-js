@@ -294,3 +294,18 @@ $('button').on('click', function() {
 // parameters are passed in right after the function key word
 // parameters are placeholders like variables, they hold values
 // parameters have value when you pass arguments
+// order is important
+// arguments are passed to the function at call time
+
+
+// RETURN & SIDE EFFECTS
+// if you do not have a return statement in your function, if will return 'undefined'
+// console.log() is considered a side effect
+
+
+// REVIEW
+var add = function(a, b) {
+  return a + b;
+};
+add(3, 4, 5); // 7
+add(4, 10, 3); // to return 13 add c as an argument and return b + c
