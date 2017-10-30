@@ -272,9 +272,9 @@ function nameStaySame(name) {
 $('body').hide(); // hide is the name of a function
 
             // function definition without a name
-myArr.forEach(function(val) {
-  console.log(val);
-});
+// myArr.forEach(function(val) {
+//   console.log(val);
+// });
 
 // jquery            // function definition
 $('button').on('click', function() {
@@ -305,7 +305,10 @@ $('button').on('click', function() {
 
 // REVIEW
 var add = function(a, b) {
+  console.log(arguments); // logging arguments with 'arguments' key word
   return a + b;
+  return a + b + arguments[2]; // use this to add 3 + 10 + 15 in add call below
 };
 add(3, 4, 5); // 7
 add(4, 10, 3); // to return 13 add c as an argument and return b + c
+add(3, 10, 5); // see second return statement in add function 
