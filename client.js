@@ -240,7 +240,7 @@ console.log(animals.length);
 // FUNCTIONS
 // small modules of code that isolate a certain operation -> encapsulation
 // code that you want repeated
-// functions are objects
+// functions are OBJECTS
 // pass arguments
 // there are parameters that hold values
 // functions have scope
@@ -306,9 +306,32 @@ $('button').on('click', function() {
 // REVIEW
 var add = function(a, b) {
   console.log(arguments); // logging arguments with 'arguments' key word
+  // console.log(Array.protoype.slice.call(arguments, 0)); // runs an error
   return a + b;
   return a + b + arguments[2]; // use this to add 3 + 10 + 15 in add call below
 };
 add(3, 4, 5); // 7
 add(4, 10, 3); // to return 13 add c as an argument and return b + c
-add(3, 10, 5); // see second return statement in add function 
+add(3, 10, 5); // see second return statement in add function
+
+
+
+// CONSTRUCTORS
+// At its core, a constructor is a function that returns an object
+
+// A in Animal is capitalized to show other programmers it is a constructor
+function AnimalMaker(name) {
+  // returning an object
+  return {
+    // property speak is a function that logs the name of the animal
+    speak: function() {
+      console.log('my name is ', name);
+    }
+  };
+}
+
+// use contructor function to create animal object
+var myAnimal = AnimalMaker('Cheetah');
+console.log(myAnimal.speak());
+
+var animalNames = ['Sheep', 'Liger', 'Big Bird'];
