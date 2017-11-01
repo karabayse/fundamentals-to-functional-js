@@ -342,10 +342,14 @@ var animalNames = ['Sheep', 'Liger', 'Big Bird'];
 var farm = [];
 
 for (var i = 0; i < animalNames.length; i++) {
+  // 1st option
+  farm.push(AnimalMaker(animalNames[i]));
+  console.log(farm);
+  // 2nd option
   var animal = AnimalMaker(animalNames[i]);
   farm.push(animal);
   console.log(farm);
-  // alternate code 
+  // 3rd option 
   farm[i] = AnimalMaker(animalNames[i]);
   console.log(farm[i]);
 }
