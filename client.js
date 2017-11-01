@@ -326,7 +326,9 @@ function AnimalMaker(name) {
     // property speak is a function that logs the name of the animal
     speak: function() {
       console.log('my name is ', name);
-    }
+    },
+    name: name,
+    owner: 'Bianca'
   };
 }
 
@@ -335,3 +337,11 @@ var myAnimal = AnimalMaker('Cheetah');
 console.log(myAnimal.speak());
 
 var animalNames = ['Sheep', 'Liger', 'Big Bird'];
+
+// LOOPING -> loop through animalNames to create animal object
+var farm = [];
+
+for (var i = 0; i < animalNames.length; i++) {
+  farm[i] = AnimalMaker(animalNames[i]);
+  console.log(farm[i]);
+}
