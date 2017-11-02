@@ -346,10 +346,50 @@ for (var i = 0; i < animalNames.length; i++) {
   farm.push(AnimalMaker(animalNames[i]));
   console.log(farm);
   // 2nd option
+            // calling AnimalMaker with one value, animalNames
   var animal = AnimalMaker(animalNames[i]);
   farm.push(animal);
   console.log(farm);
-  // 3rd option 
+  // 3rd option
   farm[i] = AnimalMaker(animalNames[i]);
   console.log(farm[i]);
+}
+
+for (var i = 0; i < farm.length; i++) {
+  console.log(farm[i].speak());
+}
+
+
+
+//
+function AnimalTestUser(username) {
+  var args = arguments.length;
+  var otherArgs = [];  // empty array into which other arguments will be pushed
+  if (args > 1) {
+    for (var i = 1; i < args; i++) {
+      otherArgs.push(arguments[i]);
+    }
+  }
+  return {
+    username: username,
+    otherArgs: otherArgs
+  };
+
+  var AnimalTest = function(username) {
+    return {
+      username: username
+    };
+  };
+
+  var myCow = AnimalTest('Bessie');
+  console.log(myCow.username); // prints 'Bessie'
+
+  var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true})
+}
+
+
+function AnimalCreator(username, species, tagline, noises) {
+  var animal = {
+
+  };
 }
