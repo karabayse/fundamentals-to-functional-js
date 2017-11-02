@@ -363,10 +363,10 @@ for (var i = 0; i < farm.length; i++) {
 
 //
 function AnimalTestUser(username) {
-  var args = arguments.length;
+  var argLength = arguments.length;
   var otherArgs = [];  // empty array into which other arguments will be pushed
   if (args > 1) {
-    for (var i = 1; i < args; i++) {
+    for (var i = 1; i < argLength; i++) {
       otherArgs.push(arguments[i]);
     }
   }
@@ -384,12 +384,26 @@ function AnimalTestUser(username) {
   var myCow = AnimalTest('Bessie');
   console.log(myCow.username); // prints 'Bessie'
 
-  var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true})
+  var testSheep = AnimalTestUser('CottonBall', {'loves dancing': true}, [1,2,3]);
+  console.log(testSheep);
 }
 
-
+// creating a constructor function for our animal model
 function AnimalCreator(username, species, tagline, noises) {
   var animal = {
-
+    username: username,
+    species: species,
+    tagline: tagline,
+    noises: noises,
+    friends: []
   };
+  return animal;
 }
+// create sheep from constructor function above
+// 'Cloud' = username
+// 'sheep' = species
+// 'You can count on me!' = tagline
+// 'baahhh', 'arrgg', 'chewchewchew' = noises 
+var sheep = AnimalCreator('Cloud', 'sheep', 'You can count on me!',
+  ['baahhh', 'arrgg', 'chewchewchew']);
+  console.log(sheep);
