@@ -403,7 +403,55 @@ function AnimalCreator(username, species, tagline, noises) {
 // 'Cloud' = username
 // 'sheep' = species
 // 'You can count on me!' = tagline
-// 'baahhh', 'arrgg', 'chewchewchew' = noises 
+// 'baahhh', 'arrgg', 'chewchewchew' = noises
 var sheep = AnimalCreator('Cloud', 'sheep', 'You can count on me!',
   ['baahhh', 'arrgg', 'chewchewchew']);
   console.log(sheep);
+
+
+function addFriend(animal, friend) {
+  // take animal from var animal in constructor function above
+  // animal.friends -> push the username of the friend into the friends array
+  animal.friends.push(friend.username);
+  animal.friends.push(friend);
+}
+
+// create cow from construtor function
+var cow = AnimalCreator('Moo', 'cow', 'got milk?', ['moo', 'moooo']);
+console.log(cow);
+
+// create llama from constructor function
+var llama = AnimalCreator('Zeny', 'llama', 'lllll', ['sdf', 'sdfsf']);
+console.log(llama);
+
+addFriend(sheep, cow);
+console.log(sheep);
+
+addFriend(sheep, llama);
+console.log(sheep);
+
+
+//
+var myFarm = [sheep, cow, llama];
+addFriend(cow, sheep);
+addFriend(llama, cow);
+console.log(myFarm);
+
+
+function addMatchesArray(farm) {
+  for (var animal in farm) {
+    // gives each animal in the farm the ability to have a match
+    farm[animal].matches = [];
+  }
+}
+addMatchesArray(myFarm);
+console.log(myFarm[0]);
+
+
+function giveMatches(farm) {
+  for (var animal in farm) {
+    farm[animal].matches.push(farm[animal].friends[0]);
+  }
+}
+giveMatches(myFarm);
+console.log(myFarm[0]);
