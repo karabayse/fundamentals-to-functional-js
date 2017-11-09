@@ -463,4 +463,13 @@ console.log(myFarm[0]);
 // NESTING OBJECTS
 var box = {};
 box.innerBox = {};
+console.log(box.innerBox);
 box.innerBox.full = true;
+console.log(box.innerBox); // logs an object full: true
+box.innerBox.babyBox = {};
+console.log(box.innerBox.babyBox); // logs an empty object
+
+
+var myInnerBox = box.innerBox;
+console.log(myInnerBox);
+box.innerBox.babyBox.says = 'What/s up?';
