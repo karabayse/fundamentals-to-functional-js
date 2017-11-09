@@ -439,8 +439,10 @@ console.log(myFarm);
 
 
 function addMatchesArray(farm) {
+  // for(var i in farm)
   for (var animal in farm) {
     // gives each animal in the farm the ability to have a match
+    // farm[i].matches = [];
     farm[animal].matches = [];
   }
 }
