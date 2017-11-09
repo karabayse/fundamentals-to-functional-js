@@ -465,11 +465,27 @@ var box = {};
 box.innerBox = {};
 console.log(box.innerBox);
 box.innerBox.full = true;
-console.log(box.innerBox); // logs an object full: true
+console.log(box.innerBox);
 box.innerBox.babyBox = {};
-console.log(box.innerBox.babyBox); // logs an empty object
-
+console.log(box.innerBox.babyBox);
 
 var myInnerBox = box.innerBox;
 console.log(myInnerBox);
 box.innerBox.babyBox.says = 'What/s up?';
+console.log(box.innerBox.babyBox); // a property was set to 'What/s up?' above,
+// therefore 'What/s up?' logs to the console
+
+box.otherBox = {};
+var innerBox2 = 'otherBox';
+box.otherBox.full = false;
+
+
+// NESTED DATA
+var friends = [];
+friends.push(animals[0].username, animals[1].username);
+console.log(friends);
+
+var relationships = {};
+relationships.friends = friends;
+console.log(relationships);
+console.log(Object.keys(relationships).length);
