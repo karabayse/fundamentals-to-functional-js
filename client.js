@@ -457,3 +457,10 @@ function giveMatches(farm) {
 }
 giveMatches(myFarm);
 console.log(myFarm[0]);
+
+
+
+// NESTING OBJECTS
+var box = {};
+box.innerBox = {};
+box.innerBox.full = true;
