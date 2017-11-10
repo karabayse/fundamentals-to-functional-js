@@ -530,5 +530,22 @@ var func = function() {
 };
 // console.log(local); -> logs an error because local is defined within the function
 
+
 // GLOBAL SCOPE
 var x = 'global!';
+
+
+// PARENT VS CHILD SCOPE
+var g = 'global';
+
+function blender(fruit) {
+  var b = fruit;
+  var y = 'yogurt';
+
+  // nested child function
+  function bs() {
+    alert(b + ' and ' + y + ' makes ' + b + ' swirl');
+  }
+  bs();
+}
+blender('blueberry');
