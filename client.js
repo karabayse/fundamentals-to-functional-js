@@ -510,9 +510,25 @@ console.log(animals);
 // add2 is function name
 // a and b are parameters that do not have value until the function is called and arguments are passed
 // {} contains the function body
-// add2(3, 4, 5) is the function call
-// (3, 4, 5) are the arguments 
+// add2(3, 4, 5) is the function call/invocation
+// (3, 4, 5) are the arguments
 var add2 = function(a, b) {
   return a + b
 };
 add2(3, 4, 5);
+
+
+// SCOPE
+// defines where we can access variables -> where variables live and exist
+// where variables are relevant -> hierarchy or spaces
+// where variables have meaning
+// created dynamically -> when we call the function
+
+// LOCAL SCOPE
+var func = function() {
+  var local = true;
+};
+// console.log(local); -> logs an error because local is defined within the function
+
+// GLOBAL SCOPE
+var x = 'global!';
