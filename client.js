@@ -553,6 +553,10 @@ blender('blueberry');
 
 
 // PRECEDENCE
+// declare a function called go
+// then the go function is called
+// then the function body runs line-by-line, after the function is called
+// then alert outside go 
 function go() {
   var l = 'local';
   var g = 'in here!';
