@@ -499,7 +499,20 @@ relationships.matches = matches;
 relationships.matches.push('pig');
 console.log(relationships);
 
+// loop through your farm
 for (var i = 0; i < animals.length; i++) {
   animals[i].relationships = relationships;
 }
 console.log(animals);
+
+
+// ANATOMY REVIEW
+// add2 is function name
+// a and b are parameters that do not have value until the function is called and arguments are passed
+// {} contains the function body
+// add2(3, 4, 5) is the function call
+// (3, 4, 5) are the arguments 
+var add2 = function(a, b) {
+  return a + b
+};
+add2(3, 4, 5);
