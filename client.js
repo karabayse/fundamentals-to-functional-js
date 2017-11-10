@@ -482,10 +482,24 @@ box.otherBox.full = false;
 
 // NESTED DATA
 var friends = [];
+// pushing the first and second animal objects' names into the friends array
 friends.push(animals[0].username, animals[1].username);
 console.log(friends);
 
+// relationships object
 var relationships = {};
+// relationships object has a property friends that is set to the friends array
 relationships.friends = friends;
 console.log(relationships);
 console.log(Object.keys(relationships).length);
+
+// empty array
+var matches = [];
+relationships.matches = matches;
+relationships.matches.push('pig');
+console.log(relationships);
+
+for (var i = 0; i < animals.length; i++) {
+  animals[i].relationships = relationships;
+}
+console.log(animals);
