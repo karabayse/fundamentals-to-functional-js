@@ -556,7 +556,7 @@ blender('blueberry');
 // declare a function called go
 // then the go function is called
 // then the function body runs line-by-line, after the function is called
-// then alert outside go 
+// then alert outside go
 function go() {
   var l = 'local';
   var g = 'in here!';
@@ -564,3 +564,17 @@ function go() {
 }
 go();
 alert(g + ' outside go');
+
+
+// BLOCK SCOPE
+// defined as anything within curly brackets that is not an object
+var inBlock = false;
+// start at 0, increment until i is less than 5
+// then will set inBlock equal to true each time it loops
+for (var i = 0; i < 5; i++) {
+  var inBlock = true;
+}
+// evaluate whether inBlock is true or false 
+if(inBlock) {
+  console.log('Is there block scope? ' + !inBlock);
+}
