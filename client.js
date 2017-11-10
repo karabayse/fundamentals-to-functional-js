@@ -543,9 +543,20 @@ function blender(fruit) {
   var y = 'yogurt';
 
   // nested child function
-  function bs() {
+  // local to the blender function
+  function blendSmoothie() {
     alert(b + ' and ' + y + ' makes ' + b + ' swirl');
   }
-  bs();
+  blendSmoothie();
 }
 blender('blueberry');
+
+
+// PRECEDENCE
+function go() {
+  var l = 'local';
+  var g = 'in here!';
+  alert(g + ' inside go');
+}
+go();
+alert(g + ' outside go');
