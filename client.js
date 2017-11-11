@@ -471,7 +471,7 @@ console.log(box.innerBox.babyBox);
 
 var myInnerBox = box.innerBox;
 console.log(myInnerBox);
-box.innerBox.babyBox.says = 'What/s up?';
+box.innerBox.babyBox.says = 'What\'s up?';
 console.log(box.innerBox.babyBox); // a property was set to 'What/s up?' above,
 // therefore 'What/s up?' logs to the console
 
@@ -574,7 +574,21 @@ var inBlock = false;
 for (var i = 0; i < 5; i++) {
   var inBlock = true;
 }
-// evaluate whether inBlock is true or false 
+// evaluate whether inBlock is true or false
 if(inBlock) {
   console.log('Is there block scope? ' + !inBlock);
 }
+
+
+// CLOSURE
+var closureAlert = function() {
+  var x = 'Help! I am a variable stuck in a closure!';
+  // inner function
+  var alerter = function() {
+    alert(x);
+  };
+  alerter();
+};
+// closureAlert calls the definition of the function (the code itself)
+// closureAlert() calls the function
+closureAlert();
