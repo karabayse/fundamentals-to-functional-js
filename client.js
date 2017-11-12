@@ -587,6 +587,11 @@ var closureAlert = function() {
   var alerter = function() {
     alert(x);
   };
+  // setTimeout(alerter, 1000);
+  // will wait a thousand milliseconds (which is one second)
+  // there will be no pause, because it will run asyncronously 
+  // then it will call the alerter function
+
   alerter();
 };
 // closureAlert calls the definition of the function (the code itself)
