@@ -582,18 +582,28 @@ if(inBlock) {
 
 // CLOSURE
 var closureAlert = function() {
-  var x = 'Help! I am a variable stuck in a closure!';
+  // var x = 'Help! I am a variable stuck in a closure!';
+  // changed to:
+  var x = 0;
   // inner function
   var alerter = function() {
-    alert(x);
+  // alert(x);
+  // changed to:
+  alert(++x);
   };
   // setTimeout(alerter, 1000);
+  // native function
   // will wait a thousand milliseconds (which is one second)
-  // there will be no pause, because it will run asyncronously 
+  // there will be no pause, because it will run asyncronously
   // then it will call the alerter function
 
-  alerter();
+  // alerter();
+  // changed to:
+  return alerter;
 };
 // closureAlert calls the definition of the function (the code itself)
 // closureAlert() calls the function
-closureAlert();
+// closureAlert();
+var funcStorer = closureAlert();
+var funcStorer2 = closureAlert();
+funcStorer();
