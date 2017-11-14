@@ -622,4 +622,19 @@ var add5 = add(5);
 // move into the add function
 // num is now 5
 
-add5(2); // logs 7
+add5(2); // results in 7
+add5(3); // results in 8
+
+
+
+//
+function counter() {
+  var n = 0;
+  // returning an object 
+  // object literal with 2 properties
+  return {
+    count: function() {return ++n;},
+    reset: function() {n = 0;}
+  };
+}
+var myCounter = counter();
