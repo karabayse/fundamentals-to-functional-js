@@ -630,7 +630,7 @@ add5(3); // results in 8
 //
 function counter() {
   var n = 0;
-  // returning an object 
+  // returning an object
   // object literal with 2 properties
   return {
     count: function() {return ++n;},
@@ -638,3 +638,18 @@ function counter() {
   };
 }
 var myCounter = counter();
+
+
+
+// CLOSURE RECIPE
+// create parent function
+function checkscope() {
+  // define some variables in the parent's local scope
+  var innerVar = 'local scope';
+  // define a function inside the parent function -> we call this a child
+  function innerFunction() {
+    return innerVar;
+  }
+  // return that function from inside the parent function
+  return innerFunction;
+}
