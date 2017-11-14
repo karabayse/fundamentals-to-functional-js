@@ -668,12 +668,16 @@ whatDoesSheSay(); // results in 'Why hello there, Alice!'
 
 
 
-//
+// makeStopwatch is called ->
+// enter into first block of code
 var makeStopwatch = function() {
   console.log('initialized');
+  // set elapsed to 0
   var elapsed = 0;
+  // log elaped to see what it is
   console.log(elapsed);
 
+  // skipped over -> has not been called 
   var stopwatch = function() {
     console.log('stopwatch');
     return elapsed;
