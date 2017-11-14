@@ -723,6 +723,9 @@ var add = function(num) {
 // creating a space in memory called ifElse and storing a function within it
 // the function has 3 parameters: condition, isTrue, isFalse
 var ifElse = function(condition, isTrue, isFalse) {
+  // this is saying that, if the value stored in condition is true,
+  // run the following block of code ->
+  // boolean values
   if(condition) {
     isTrue();
   } else {
@@ -736,3 +739,15 @@ ifElse(true,
 );
 // passing false, logTrue, logFalse as arguments
 ifElse(false, logTrue, logFalse);
+
+
+
+// PASSING ARGUMENTS
+var increment = function(n) {return n +1;};
+var square = function(n) {return n*n;};
+
+var doMathSoIDontHaveTo = function(n, func) {
+  return func(n);
+};
+doMathSoIDontHaveTo(5, square);
+doMathSoIDontHaveTo(4, increment);
