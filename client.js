@@ -653,3 +653,15 @@ function checkscope() {
   // return that function from inside the parent function
   return innerFunction;
 }
+
+
+// anonymous function saved in a variable 
+var sayAlice = function() {
+  var makeLog = function() {
+    console.log(alice);
+  };
+  var alice = 'Why hello there, Alice!';
+  return makeLog;
+};
+var whatDoesSheSay = sayAlice();
+whatDoesSheSay(); // results in 'Why hello there, Alice!'
