@@ -589,7 +589,7 @@ var closureAlert = function() {
   var alerter = function() {
   // alert(x);
   // changed to:
-  alert(++x);
+  alert(++x); // add 1 to x, and then return it
   };
   // setTimeout(alerter, 1000);
   // native function
@@ -604,6 +604,22 @@ var closureAlert = function() {
 // closureAlert calls the definition of the function (the code itself)
 // closureAlert() calls the function
 // closureAlert();
-var funcStorer = closureAlert();
+var funcStorer = closureAlert(); // funcStorer is the closure
 var funcStorer2 = closureAlert();
 funcStorer();
+
+
+// Additional CLOSURE example
+var add = function(num) {
+  var num1 = num;
+  var addToNum1 = function(num2) {
+    return numb1 + num2;
+  };
+  return addToNum1;
+};
+        // call the add function
+var add5 = add(5);
+// move into the add function
+// num is now 5
+
+add5(2); // logs 7
