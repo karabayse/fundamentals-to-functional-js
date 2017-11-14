@@ -720,9 +720,11 @@ var add = function(num) {
 
 // CALLBACKS
 // if else function rather than if else statement
+// creating a space in memory called ifElse and storing a function within it
+// the function has 3 parameters: condition, isTrue, isFalse
 var ifElse = function(condition, isTrue, isFalse) {
   if(condition) {
-    isTrue;
+    isTrue();
   } else {
     return isFalse();
   }
@@ -732,3 +734,5 @@ ifElse(true,
   function() {console.log(true);},
   function() {console.log(false);}
 );
+// passing false, logTrue, logFalse as arguments
+ifElse(false, logTrue, logFalse);
