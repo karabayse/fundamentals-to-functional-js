@@ -716,3 +716,19 @@ var add = function(num) {
     return num1 + num2;
   };
 };
+
+
+// CALLBACKS
+// if else function rather than if else statement
+var ifElse = function(condition, isTrue, isFalse) {
+  if(condition) {
+    isTrue;
+  } else {
+    return isFalse();
+  }
+};
+ifElse(true,
+  // passing in 2 anonymous functions
+  function() {console.log(true);},
+  function() {console.log(false);}
+);
