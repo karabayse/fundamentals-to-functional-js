@@ -677,7 +677,7 @@ var makeStopwatch = function() {
   // log elaped to see what it is
   console.log(elapsed);
 
-  // skipped over -> has not been called 
+  // skipped over -> has not been called
   var stopwatch = function() {
     console.log('stopwatch');
     return elapsed;
@@ -688,3 +688,31 @@ var makeStopwatch = function() {
     return stopwatch;
 };
 var x = makeStopwatch();
+
+
+
+// write a function called nonsense that takes an input string
+var nonsense = function(string) {
+  // this function containes another function called blab
+  // blab alerts string and is immediately called inside the nonsense function
+  var blab = function() {
+    alert(string);
+  };
+  blab();
+};
+
+
+
+// HIGHER-ORDER FUNCTIONS
+// 1. Takes a function as an input (argument)
+element.addEventlistener('click', function() {
+  console.log('element clicked!');
+});
+//OR
+// 2. Returns a function as the output
+var add = function(num) {
+  var num1 = num;
+  return addToNum1 = function(num2) {
+    return num1 + num2;
+  };
+};
