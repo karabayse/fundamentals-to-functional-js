@@ -655,7 +655,7 @@ function checkscope() {
 }
 
 
-// anonymous function saved in a variable 
+// anonymous function saved in a variable
 var sayAlice = function() {
   var makeLog = function() {
     console.log(alice);
@@ -665,3 +665,22 @@ var sayAlice = function() {
 };
 var whatDoesSheSay = sayAlice();
 whatDoesSheSay(); // results in 'Why hello there, Alice!'
+
+
+
+//
+var makeStopwatch = function() {
+  console.log('initialized');
+  var elapsed = 0;
+  console.log(elapsed);
+
+  var stopwatch = function() {
+    console.log('stopwatch');
+    return elapsed;
+  };
+  var increase = function() {
+    elapsed++;};
+    setInterval(increase, 1000);
+    return stopwatch;
+};
+var x = makeStopwatch();
