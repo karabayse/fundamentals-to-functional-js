@@ -751,3 +751,23 @@ var doMathSoIDontHaveTo = function(n, func) {
 };
 doMathSoIDontHaveTo(5, square);
 doMathSoIDontHaveTo(4, increment);
+
+
+
+// toaster exercise
+// prevents the user from setting the toaster setting too high 
+var Toaster = function() {
+  var maxTemp = 500;
+  var temp = 0;
+  return {
+    setTemp: function(newTemp) {
+      if(newTemp > maxTemp) {
+        console.log('That temp is too high!');
+      } else {
+        temp = newTemp;
+      }
+    }
+  };
+};
+var myToaster = Toaster();
+myToaster.setTemp(300);
