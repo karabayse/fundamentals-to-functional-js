@@ -798,3 +798,11 @@ firstVal = function(list, func) {
     }
   }
 };
+
+
+
+// UNDERSCORE.js
+// a utility library containing methods for use with JS
+// syntax:  _.
+// can be used in any environment, i.e. Node.js
+// documentation here:  http://underscorejs.org
