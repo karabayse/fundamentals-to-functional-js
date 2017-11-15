@@ -786,3 +786,15 @@ var funcCaller = function(func, arg) {
 var firstVal = function(arr, func) {
   func(arr[0], 0, arr);
 };
+
+// change firstVal to work not only with arrays but also objects
+// since object are not ordered, you can use any key-value pair on the object
+firstVal = function(list, func) {
+  if(Array.isArray(list)) {
+    return func(arr[0], 0, arr);
+  } else {
+    for(var k in list) {
+      return func(list[k], k, list);
+    }
+  }
+};
