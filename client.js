@@ -755,7 +755,7 @@ doMathSoIDontHaveTo(4, increment);
 
 
 // toaster exercise
-// prevents the user from setting the toaster setting too high 
+// prevents the user from setting the toaster setting too high
 var Toaster = function() {
   var maxTemp = 500;
   var temp = 0;
@@ -771,3 +771,18 @@ var Toaster = function() {
 };
 var myToaster = Toaster();
 myToaster.setTemp(300);
+
+
+
+// CALLBACKS
+// write a function, funcCaller, that takes a func (a function) and an arg (any data type)
+// the function returns the func called with arg (as an arguments)
+var funcCaller = function(func, arg) {
+  return(func(arg));
+};
+
+// write a function, firstVal, that takes an array, arr, and a function, func, and
+// calls func with the first index of the arr, index# and the whole array
+var firstVal = function(arr, func) {
+  func(arr[0], 0, arr);
+};
