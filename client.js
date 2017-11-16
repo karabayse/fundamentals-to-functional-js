@@ -806,3 +806,18 @@ firstVal = function(list, func) {
 // syntax:  _.
 // can be used in any environment, i.e. Node.js
 // documentation here:  http://underscorejs.org
+
+// _.each
+// iterates over a list of elements, yielding each in turn to an iterator funciton
+// each invocation of iterator is called with 3 arguments: element, index, list
+// if list is a JS object, iterator's arguments will be: value, key, list
+_.each([1,2,3], function(val, i, list) {
+  console.log(val);
+});
+
+// _.each again 
+var pocketmon = ['Charisaur', 'Bulbazard', 'Twomew'];
+var logger = function(val) {
+  console.log(val);
+};
+_.each(pocketmon, logger);
