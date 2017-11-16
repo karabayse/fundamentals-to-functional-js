@@ -815,9 +815,18 @@ _.each([1,2,3], function(val, i, list) {
   console.log(val);
 });
 
-// _.each again 
+// _.each
 var pocketmon = ['Charisaur', 'Bulbazard', 'Twomew'];
 var logger = function(val) {
   console.log(val);
 };
 _.each(pocketmon, logger);
+
+// _.map
+// produces a new array of values by mapping each value in list through a
+// transformation function (iterator)
+// each invocation of iterator is called with 3 arguments: element, index, list
+// if list is a JS object, iterator's arguments will be: value, key, list
+var nums = _.map([1, 2, 3], function(v, i, list) {
+  return v + 1;
+});
